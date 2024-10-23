@@ -1,0 +1,129 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+$icons_font-size: 28px;
+
+.sidebar {
+  width: 288px;
+  height: calc(100vh - $header_hight);
+  border-right: $border_style;
+
+  & .sidebar__navigation {
+    height: 40px;
+    border-bottom: $border_style;
+    gap: 20px;
+    display: flex;
+    padding: 0 10px;
+
+    & button {
+      @include center_center;
+
+      font-size: $icons_font-size;
+      padding: 0 4px;
+    }
+  }
+
+  & .sidebar__profile {
+    height: 376px;
+    border-bottom: $border_style;
+    padding: 14px;
+
+    & img {
+      border-radius: 8px;
+    }
+
+    & .sidebar__profile__name {
+      margin-top: 10px;
+      font-size: $font_size_18;
+      font-weight: $medium_font-weight;
+    }
+
+    & .sidebar__profile__description {
+      display: flex;
+      flex-wrap: wrap;
+
+      column-gap: 10px;
+      row-gap: 5px;
+      margin-top: 10px;
+
+      & span {
+        padding: 6 8px;
+        border-radius: 8px;
+        font-size: $font_size_12;
+        font-weight: $normal_font-weight;
+        line-height: 14px;
+        text-align: center;
+        background-color: $border_color;
+      }
+    }
+  }
+
+  & .sidebar__links {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .sidebar__link {
+      @include center_justify-between;
+      gap: 10px;
+
+      & .sidebar__link__icon_wrapper {
+        @include center_center;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+
+        & i {
+          font-size: $font_size_22;
+        }
+      }
+
+      & #git-icon {
+        background-color: $border_color;
+
+        & i {
+          background-color: $border_color;
+        }
+      }
+
+      & #inst-icon {
+        background: rgba(131, 58, 180, 0.5);
+        background: linear-gradient(
+          to right,
+          rgba(131, 58, 180, 0.5),
+          rgba(253, 29, 29, 0.5),
+          rgba(252, 176, 69, 0.5)
+        );
+
+        & i {
+          background-color: rgba(253, 29, 29, 0.1);
+        }
+      }
+
+      #telegram-icon {
+        background-color: rgba(27, 146, 209, 0.25);
+
+        & i {
+          background-color: rgba(27, 146, 209, 0.05);
+        }
+      }
+
+      & a {
+        color: $light_gray;
+        width: 200px;
+        overflow: hidden;
+
+        & .social__media {
+          font-size: $font_size_16;
+          font-weight: $medium_font-weight;
+        }
+
+        & .social__link {
+          font-size: $font_size_12;
+          font-weight: $normal_font-weight;
+        }
+      }
+    }
+  }
+}

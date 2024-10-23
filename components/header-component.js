@@ -45,7 +45,6 @@ class HeaderComponent extends HTMLElement {
       const currentLink = link.getAttribute("href").split("/").slice(-1)[0];
 
       if (currentLink === currentPath) {
-        console.log(link, "I am active");
         link.classList.add("active");
       } else {
         link.classList.remove("active");
@@ -54,7 +53,7 @@ class HeaderComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    this.createActiveLink(); // Call the method to set active link
+    this.createActiveLink();
   }
 }
 

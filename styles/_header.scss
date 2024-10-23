@@ -14,15 +14,14 @@
 
 .header {
   @include center_justify-between;
-  height: 48px;
+  height: $header_hight;
   padding: 8px 14px;
   gap: 0px;
   border-bottom: $border_style;
-  color: $white;
 
   & .header__title {
-    font-size: $text_size_22;
-    font-weight: 500;
+    font-size: $font_size_22;
+    font-weight: $medium_font-weight;
     line-height: 28px;
     letter-spacing: -1px;
     text-align: center;
@@ -36,7 +35,7 @@
 
   & .header__right {
     @include center_center;
-    font-size: $text_size_16;
+    font-size: $font_size_16;
     gap: 24px;
 
     ul {
@@ -47,7 +46,6 @@
       li {
         a {
           position: relative;
-          text-decoration: none;
           color: $white;
 
           &:hover {

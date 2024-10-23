@@ -1,13 +1,28 @@
-@import "./header";
 @import "./variables.scss";
+
+@import "./header";
+@import "./sidebar";
 
 * {
   scrollbar-width: thin;
   //   scrollbar-color: #d16fd3 #000;
   scrollbar-gutter: stable;
+  color: $white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: $dark_grey;
+  background-color: $dark_gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+}
+
+.content_wrapper {
+  display: flex;
 }
