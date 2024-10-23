@@ -2,6 +2,9 @@ class SidebarComponent extends HTMLElement {
   constructor() {
     super();
 
+    // Переносимо масив у властивість класу
+    this.pages = ["index.html", "about.html", "projects.html", "contact.html"];
+
     const template = document.createElement("template");
     template.innerHTML = `
         <head> 
@@ -72,15 +75,13 @@ class SidebarComponent extends HTMLElement {
 
   goNextPage() {
     const nextButton = this.shadowRoot.getElementById("next");
-    const pages = ["index.html", "about.html", "projects.html", "contact.html"];
-
     const currentPath = window.location.pathname.split("/").slice(-1)[0];
-    const currentPageIndex = pages.indexOf(currentPath);
+    const currentPageIndex = this.pages.indexOf(currentPath);
 
     nextButton.addEventListener("click", () => {
-      if (currentPageIndex + 1 < pages.length) {
-        window.location.href = pages[currentPageIndex + 1];
-      } else if (currentPageIndex === pages.length - 1) {
+      if (currentPageIndex + 1 < this.pages.length) {
+        window.location.href = this.pages[currentPageIndex + 1];
+      } else if (currentPageIndex === this.pages.length - 1) {
         nextButton.disabled = true;
         nextButton.style.cursor = "not-allowed";
       }
@@ -89,14 +90,12 @@ class SidebarComponent extends HTMLElement {
 
   goPrevPage() {
     const prevButton = this.shadowRoot.getElementById("prev");
-    const pages = ["index.html", "about.html", "projects.html", "contact.html"];
-
     const currentPath = window.location.pathname.split("/").slice(-1)[0];
-    const currentPageIndex = pages.indexOf(currentPath);
+    const currentPageIndex = this.pages.indexOf(currentPath);
 
     prevButton.addEventListener("click", () => {
       if (currentPageIndex > 0) {
-        window.location.href = pages[currentPageIndex - 1];
+        window.location.href = this.pages[currentPageIndex - 1];
       } else if (currentPageIndex === 0) {
         prevButton.disabled = true;
         prevButton.style.cursor = "not-allowed";

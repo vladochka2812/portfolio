@@ -15,7 +15,7 @@
   text-align: center;
   gap: 0;
 }
-.header .header__title ::after {
+.header .header__title::after {
   content: ".UZ";
   color: rgb(57, 150, 95);
 }
@@ -176,6 +176,7 @@
 
 * {
   scrollbar-width: thin;
+  scrollbar-color: rgb(49, 49, 49) #000;
   scrollbar-gutter: stable;
   color: rgb(255, 255, 255);
   margin: 0;
