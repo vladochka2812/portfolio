@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 8px 14px;
+  gap: 0px;
+  border-bottom: 2px solid rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+}
+.header .header__title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -1px;
+  text-align: center;
+  gap: 0;
+}
+.header .header__title ::after {
+  content: ".UZ";
+  color: rgb(57, 150, 95);
+}
+.header .header__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  gap: 24px;
+}
+.header .header__right ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.header .header__right ul li a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.header .header__right ul li a:hover {
+  padding-bottom: 13px;
+}
+.header .header__right ul li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(1);
+  background-color: rgba(57, 150, 95, 0.5);
+}
+.header .header__right ul li .active {
+  padding-bottom: 13px;
+}
+.header .header__right ul li .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(1);
+  background-color: rgb(57, 150, 95);
+}
+.header .header__right .header__right__git-link {
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+  gap: 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(27, 27, 27);
+}

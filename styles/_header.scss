@@ -1,0 +1,81 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@mixin navLinkAfter {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.header {
+  @include center_justify-between;
+  height: 48px;
+  padding: 8px 14px;
+  gap: 0px;
+  border-bottom: $border_style;
+  color: $white;
+
+  & .header__title {
+    font-size: $text_size_22;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -1px;
+    text-align: center;
+    gap: 0;
+
+    ::after {
+      content: ".UZ";
+      color: $green;
+    }
+  }
+
+  & .header__right {
+    @include center_center;
+    font-size: $text_size_16;
+    gap: 24px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+
+      li {
+        a {
+          position: relative;
+          text-decoration: none;
+          color: $white;
+
+          &:hover {
+            padding-bottom: 13px;
+
+            &::after {
+              @include navLinkAfter;
+              background-color: $green_opacity;
+            }
+          }
+        }
+
+        & .active {
+          padding-bottom: 13px;
+
+          &::after {
+            @include navLinkAfter;
+            background-color: $green;
+          }
+        }
+      }
+    }
+
+    & .header__right__git-link {
+      padding: 2px;
+      width: 32px;
+      height: 32px;
+      gap: 10px;
+    }
+  }
+}

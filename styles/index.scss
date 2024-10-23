@@ -1,0 +1,13 @@
+@import "./header";
+@import "./variables.scss";
+
+* {
+  scrollbar-width: thin;
+  //   scrollbar-color: #d16fd3 #000;
+  scrollbar-gutter: stable;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: $dark_grey;
+}
