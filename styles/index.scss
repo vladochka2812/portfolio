@@ -1,7 +1,8 @@
-@import "./variables.scss";
+@import "./variables";
 
 @import "./header";
 @import "./sidebar";
+@import "./home";
 
 * {
   scrollbar-width: thin;
@@ -12,7 +13,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $font;
-  background-color: $dark_gray;
 }
 
 a {
@@ -25,4 +25,30 @@ button {
 
 .content_wrapper {
   display: flex;
+  background-image: url("../body_bg.jpg");
+}
+
+.nav_button {
+  @include center_center;
+  background-color: $green;
+  padding: 10 36px;
+  gap: 12px;
+  border-radius: 8px;
+  font-size: $font_size_18;
+  font-weight: $medium_font-weight;
+
+  .arrow_icon {
+    font-size: $font_size_22;
+    transition-property: transform;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    background-color: $green_opacity;
+
+    .arrow_icon {
+      transform: translateX(5px);
+    }
+  }
 }

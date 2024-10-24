@@ -14,8 +14,8 @@
     />
 
     <link rel="stylesheet" href="../styles/css/index.css" />
-    <script src="../components/header-component.js"></script>
-    <script src="../components/sidebar-component.js"></script>
+    <script src="../components/header-component.js" defer></script>
+    <script src="../components/sidebar-component.js" defer></script>
     <title>Portfolio</title>
   </head>
 
@@ -23,7 +23,21 @@
     <header-component></header-component>
     <div class="content_wrapper">
       <sidebar-component></sidebar-component>
-      <h1>Home</h1>
+      <div class="home">
+        <h1 class="home__title">
+          <span>Hello, I'm </span>
+          <span class="home__title__name">Yaxyobek Habibulloyev</span>
+        </h1>
+        <p class="home__text">
+          As a web developer and designer, I am a result-oriented professional.
+          My goal is to contribute to product success by creating and managing
+          websites and web applications.
+        </p>
+        <a href="./about.html" class="nav_button">
+          <span>About me</span>
+          <span class="arrow_icon">&#8594;</span>
+        </a>
+      </div>
     </div>
   </body>
 </html>
