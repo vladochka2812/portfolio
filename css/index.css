@@ -6,7 +6,6 @@
   padding: 8px 14px;
   gap: 0px;
   border-bottom: 2px solid rgb(49, 49, 49);
-  background-color: rgb(27, 27, 27);
 }
 .header .header__title {
   font-size: 22px;
@@ -48,7 +47,7 @@
   height: 2px;
   width: 100%;
   transform: scaleX(1);
-  background-color: rgba(57, 150, 95, 0.6);
+  background-color: rgba(57, 150, 95, 0.5);
 }
 .header .header__right ul li .active {
   padding-bottom: 13px;
@@ -75,7 +74,6 @@
   width: 288px;
   height: calc(100vh - 48px);
   border-right: 2px solid rgb(49, 49, 49);
-  background-color: rgb(27, 27, 27);
 }
 .sidebar .sidebar__navigation {
   height: 40px;
@@ -151,7 +149,12 @@
 }
 .sidebar .sidebar__links .sidebar__link #inst-icon {
   background: rgba(131, 58, 180, 0.5);
-  background: linear-gradient(to right, rgba(131, 58, 180, 0.5), rgba(253, 29, 29, 0.5), rgba(252, 176, 69, 0.5));
+  background: linear-gradient(
+    to right,
+    rgba(131, 58, 180, 0.5),
+    rgba(253, 29, 29, 0.5),
+    rgba(252, 176, 69, 0.5)
+  );
 }
 .sidebar .sidebar__links .sidebar__link #inst-icon i {
   background-color: rgba(253, 29, 29, 0.1);
@@ -184,23 +187,6 @@
   width: 100%;
   height: calc(100vh - 48px);
   background-image: url("../body_bg.jpg");
-  gap: 24px;
-}
-.home .home__title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 54px;
-}
-.home .home__title .home__title__name {
-  color: rgb(57, 150, 95);
-}
-.home .home__text {
-  width: 633px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  text-align: center;
-  color: rgb(229, 231, 235);
 }
 
 * {
@@ -212,6 +198,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  background-color: rgb(27, 27, 27);
 }
 
 a {
@@ -225,28 +212,4 @@ button {
 .content_wrapper {
   display: flex;
   background-image: url("../body_bg.jpg");
-}
-
-.nav_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(57, 150, 95);
-  padding: 10 36px;
-  gap: 12px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.nav_button .arrow_icon {
-  font-size: 22px;
-  transition-property: transform;
-  transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav_button:hover {
-  background-color: rgba(57, 150, 95, 0.6);
-}
-.nav_button:hover .arrow_icon {
-  transform: translateX(5px);
 }

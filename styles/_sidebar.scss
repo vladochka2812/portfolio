@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./mixins.scss";
+@import "./variables";
+@import "./mixins";
 
 $icons_font-size: 28px;
 
@@ -7,6 +7,7 @@ $icons_font-size: 28px;
   width: 288px;
   height: calc(100vh - $header_hight);
   border-right: $border_style;
+  background-color: $dark_gray;
 
   .sidebar__navigation {
     height: 40px;

@@ -5,7 +5,7 @@ $light_gray: rgb(229, 231, 235, 1);
 $border_color: rgb(49, 49, 49, 1);
 $transparent_gray: rgba(255, 255, 255, 0.25);
 $white: rgba(255, 255, 255, 1);
-$green_opacity: rgba(57, 150, 95, 0.5);
+$green_opacity: rgba(57, 150, 95, 0.6);
 $green: rgba(57, 150, 95, 1);
 
 $border_style: 2px solid $border_color;
@@ -15,31 +15,12 @@ $font_size_18: 18px;
 $font_size_22: 22px;
 $font_size_12: 12px;
 $font_size_14: 14px;
+$font_size_36: 36px;
 
 $header_hight: 48px;
 
 $medium_font-weight: 500;
 $normal_font-weight: 400;
+$extra_font-weight: 700;
 
-$inst_bg: radial-gradient(
-    circle at 35% 90%,
-    rgba(254, 197, 100, 0.25),
-    transparent 50%
-  ),
-  radial-gradient(
-    circle at 0px 140%,
-    rgba(254, 197, 100, 0.25),
-    transparent 50%
-  ),
-  radial-gradient(at 0px -25%, rgba(82, 88, 207, 0.25), transparent 50%),
-  radial-gradient(at 20% -50%, rgba(82, 88, 207, 0.25), transparent 50%),
-  radial-gradient(at 100% 0px, rgba(137, 61, 194, 0.25), transparent 50%),
-  radial-gradient(at 60% -20%, rgba(137, 61, 194, 0.25), transparent 50%),
-  radial-gradient(at 100% 100%, rgba(217, 49, 122, 0.25), transparent),
-  linear-gradient(
-    rgba(101, 89, 202, 0.25),
-    rgba(188, 49, 143, 0.25) 30%,
-    rgba(227, 63, 95, 0.25) 50%,
-    rgba(247, 118, 56, 0.25) 70%,
-    rgba(254, 198, 109, 0.25) 100%
-  );
+$bg-image: url("../body_bg.jpg");

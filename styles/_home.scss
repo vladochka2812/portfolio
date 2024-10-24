@@ -1,0 +1,30 @@
+@import "./variables";
+@import "./mixins";
+
+.home {
+  @include center_center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - $header_hight);
+  background-image: $bg-image;
+  gap: 24px;
+
+  .home__title {
+    font-size: $font_size_36;
+    font-weight: $extra_font-weight;
+    line-height: 54px;
+
+    .home__title__name {
+      color: $green;
+    }
+  }
+
+  .home__text {
+    width: 633px;
+    font-size: $font_size_18;
+    font-weight: $normal_font-weight;
+    line-height: 27px;
+    text-align: center;
+    color: $light_gray;
+  }
+}
