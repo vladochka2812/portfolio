@@ -252,13 +252,13 @@
 .about .about__do {
   margin-top: 48px;
 }
-.about .about__do .about__do__list {
+.about .about__do .about__do-list {
   margin-top: 36px;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.about .about__do .about__do__list .do__item {
+.about .about__do .about__do-list .do__item {
   display: flex;
   align-items: center;
   height: 8rem;
@@ -268,16 +268,16 @@
   gap: 1.25rem;
   padding: 1.25rem;
 }
-.about .about__do .about__do__list .do__item .do__text {
+.about .about__do .about__do-list .do__item .do__text {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.about .about__do .about__do__list .do__item .do__text .do__text__title {
+.about .about__do .about__do-list .do__item .do__text .do__text__title {
   font-size: 18px;
   font-weight: 700;
 }
-.about .about__do .about__do__list .do__item .do__text .do__text__description {
+.about .about__do .about__do-list .do__item .do__text .do__text__description {
   font-size: 16px;
 }
 

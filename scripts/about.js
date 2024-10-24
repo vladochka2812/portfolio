@@ -1,7 +1,7 @@
 const technologiesListContainer = document.getElementById(
   "about__technologies__list"
 );
-const doListContainer = document.getElementById("about__do__list");
+const doListContainer = document.getElementById("about__do-list");
 
 const technologiesList = [
   { image: "../images/technologies/html.png", name: "HTML" },

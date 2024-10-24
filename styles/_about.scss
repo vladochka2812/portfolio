@@ -61,7 +61,7 @@ $block_margin: 48px;
   .about__do {
     margin-top: $block_margin;
 
-    .about__do__list {
+    .about__do-list {
       @include grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
