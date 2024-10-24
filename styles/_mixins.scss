@@ -10,3 +10,9 @@
   justify-content: center;
 }
 
+@mixin title_underline {
+  content: "";
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: $green;
+}
