@@ -14,6 +14,9 @@
 
 .header {
   @include center_justify-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
   height: $header_hight;
   padding: 8px 14px;
   gap: 0px;

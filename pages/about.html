@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles/css/index.css" />
     <script src="../components/header-component.js" defer></script>
     <script src="../components/sidebar-component.js" defer></script>
+    <script src="../scripts/about.js" defer></script>
     <title>About</title>
   </head>
   <body>
@@ -23,10 +24,11 @@
 
     <div class="content_wrapper">
       <sidebar-component></sidebar-component>
+
       <div class="about">
         <div class="about__me">
           <h1 class="title_main">About me</h1>
-          <span>
+          <span class="about__me__text">
             <p>
               Hello, my name is Habibulloyev Yaxyobek. I was born in 2006 in the
               Andijan region of the Republic of Uzbekistan. From a young age, my
@@ -58,6 +60,23 @@
               visit the Projects page!
             </p>
           </span>
+          <a href="./projects.html" class="nav_button">
+            <span>Projects</span>
+            <span class="arrow_icon">&#8594;</span>
+          </a>
+        </div>
+
+        <div class="about__technologies">
+          <h2 class="title_sub">Technologies</h2>
+          <ul
+            class="about__technologies__list"
+            id="about__technologies__list"
+          ></ul>
+        </div>
+
+        <div class="about__do">
+          <h2 class="title_sub">What I Can Do</h2>
+          <ul class="about__do-list" id="about__do-list"></ul>
         </div>
       </div>
     </div>

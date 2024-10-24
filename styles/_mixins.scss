@@ -16,3 +16,8 @@
   border-radius: 9999px;
   background-color: $green;
 }
+
+@mixin flex_column {
+  display: flex;
+  flex-direction: column;
+}

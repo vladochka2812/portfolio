@@ -4,6 +4,8 @@
 $icons_font-size: 28px;
 
 .sidebar {
+  position: sticky;
+  top: $header_hight;
   width: 288px;
   height: calc(100vh - $header_hight);
   border-right: $border_style;
@@ -111,7 +113,7 @@ $icons_font-size: 28px;
       }
 
       a {
-        color: $light_gray;
+          
         width: 200px;
         overflow: hidden;
 

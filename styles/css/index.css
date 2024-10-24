@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
   height: 48px;
   padding: 8px 14px;
   gap: 0px;
@@ -72,6 +75,8 @@
 }
 
 .sidebar {
+  position: sticky;
+  top: 48px;
   width: 288px;
   height: calc(100vh - 48px);
   border-right: 2px solid rgb(49, 49, 49);
@@ -163,7 +168,6 @@
   background-color: rgba(27, 146, 209, 0.05);
 }
 .sidebar .sidebar__links .sidebar__link a {
-  color: rgb(229, 231, 235);
   width: 200px;
   overflow: hidden;
 }
@@ -200,19 +204,88 @@
   font-weight: 400;
   line-height: 27px;
   text-align: center;
-  color: rgb(229, 231, 235);
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 40 20px;
+}
+.about .about__me__text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  row-gap: 20px;
+  font-size: 18px;
+}
+.about .nav_button {
+  margin-top: 36px;
+}
+.about .about__technologies {
+  margin-top: 48px;
+}
+.about .about__technologies .about__technologies__list {
+  margin-top: 36px;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.about .about__technologies .about__technologies__list .technology__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  background-color: rgb(27, 27, 27);
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 0.75rem;
+}
+.about .about__technologies .about__technologies__list .technology__item .technology__logo {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+}
+.about .about__technologies .about__technologies__list .technology__item .technology__name {
+  display: none;
+  font-size: 22px;
+}
+.about .about__do {
+  margin-top: 48px;
+}
+.about .about__do .about__do-list {
+  margin-top: 36px;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.about .about__do .about__do-list .do__item {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  background-color: rgb(27, 27, 27);
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 0.75rem;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+.about .about__do .about__do-list .do__item .do__text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.about .about__do .about__do-list .do__item .do__text .do__text__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.about .about__do .about__do-list .do__item .do__text .do__text__description {
+  font-size: 16px;
 }
 
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(49, 49, 49) #000;
   scrollbar-gutter: stable;
-  color: rgb(255, 255, 255);
+  color: rgb(229, 231, 235);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -242,6 +315,7 @@ button {
   border-radius: 8px;
   font-size: 18px;
   font-weight: 500;
+  max-width: 200px;
 }
 .nav_button .arrow_icon {
   font-size: 22px;
@@ -257,9 +331,9 @@ button {
 }
 
 .title_main {
-  font-size: 36px;
   display: flex;
   flex-direction: column;
+  font-size: 36px;
   gap: 8px;
 }
 .title_main::after {
@@ -269,4 +343,19 @@ button {
   background-color: rgb(57, 150, 95);
   height: 0.5rem;
   width: 8rem;
+}
+
+.title_sub {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  gap: 8px;
+}
+.title_sub::after {
+  content: "";
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: rgb(57, 150, 95);
+  height: 0.375rem;
+  width: 7rem;
 }
