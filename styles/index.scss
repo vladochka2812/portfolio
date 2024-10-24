@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@import "./header";
+@import "./sidebar";
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $border_color #000;
+  scrollbar-gutter: stable;
+  color: $white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+  background-color: $dark_gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+}
+
+.content_wrapper {
+  display: flex;
+}
