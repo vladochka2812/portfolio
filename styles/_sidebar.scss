@@ -32,7 +32,7 @@ $icons_font-size: 28px;
     padding: 14px;
 
     img {
-      border-radius: 8px;
+      border-radius: $normal_border-radius;
     }
 
     .sidebar__profile__name {
@@ -51,7 +51,7 @@ $icons_font-size: 28px;
 
       span {
         padding: 6 8px;
-        border-radius: 8px;
+        border-radius: $normal_border-radius;
         font-size: $font_size_12;
         font-weight: $normal_font-weight;
         line-height: 14px;
@@ -75,7 +75,7 @@ $icons_font-size: 28px;
         @include center_center;
         width: 48px;
         height: 48px;
-        border-radius: 8px;
+        border-radius: $normal_border-radius;
 
         i {
           font-size: $font_size_22;

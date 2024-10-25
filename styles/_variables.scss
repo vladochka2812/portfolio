@@ -1,6 +1,7 @@
 $font: "Poppins", sans-serif;
 
 $dark_gray: rgba(27, 27, 27, 1);
+$dark_gray_transparent: rgba(27, 27, 27, 0.5);
 $light_gray: rgb(229, 231, 235, 1);
 $border_color: rgb(49, 49, 49, 1);
 $transparent_gray: rgba(255, 255, 255, 0.25);
@@ -17,6 +18,7 @@ $font_size_12: 12px;
 $font_size_14: 14px;
 $font_size_30: 30px;
 $font_size_36: 36px;
+$font_size_20: 20px;
 
 $header_hight: 48px;
 $sidebar_width: 288px;
@@ -26,3 +28,5 @@ $normal_font-weight: 400;
 $extra_font-weight: 700;
 
 $bg-image: url("../body_bg.jpg");
+
+$normal_border-radius: 8px;
