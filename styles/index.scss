@@ -5,6 +5,7 @@
 @import "./sidebar";
 @import "./home";
 @import "./about";
+@import "./projects";
 
 * {
   scrollbar-width: thin;
@@ -21,7 +22,11 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+input,
+select,
+option,
+li {
   all: unset;
 }
 
@@ -35,7 +40,7 @@ button {
   background-color: $green;
   padding: 10 36px;
   gap: 12px;
-  border-radius: 8px;
+  border-radius: $normal_border-radius;
   font-size: $font_size_18;
   font-weight: $medium_font-weight;
   max-width: 200px;
@@ -79,3 +84,5 @@ button {
     width: 7rem;
   }
 }
+
+

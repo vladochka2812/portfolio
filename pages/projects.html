@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles/css/index.css" />
     <script src="../components/header-component.js" defer></script>
     <script src="../components/sidebar-component.js" defer></script>
+    <script src="../scripts/projects.js" defer></script>
 
     <title>Projects</title>
   </head>
@@ -24,8 +25,64 @@
 
     <div class="content_wrapper">
       <sidebar-component></sidebar-component>
+      <div class="projects">
+        <h1 class="title_main">Projects</h1>
+        <div class="projects__filter">
+          <h3><span>Filter</span> <i class="fa fa-filter"></i></h3>
+          <div class="projects__filter-tools">
+            <div class="filter__tools-search" id="filter__tools-search">
+              <i class="fa fa-search"></i>
+              <input type="text" value="" placeholder="Search..." />
+            </div>
 
-      <h1>Projects</h1>
+            <div id="filter__tools-selector">
+              <div class="selector-title">
+                <img src="../images/technologies/all.png" alt="type" />
+                <span>Project type</span>
+              </div>
+              <div class="selector-options">
+                <div data-value="" class="option">
+                  <img src="../images/technologies/menu.png" alt="all" />
+                  <span>All</span>
+                </div>
+                <div data-value="website" class="option">
+                  <img src="../images/technologies/web.png" alt="website" />
+                  <span>Website</span>
+                </div>
+                <div data-value="figma" class="option">
+                  <img src="../images/technologies/figma.png" alt="figma" />
+                  <span>Figma</span>
+                </div>
+                <div data-value="tg bot" class="option">
+                  <img src="../images/technologies/robot.png" alt="tg bot" />
+                  <span>TG Bot</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul id="projects__container"></ul>
+      </div>
+
+      <div id="modal" class="modal" style="display: none">
+        <div class="modal_content_wrapper">
+          <div class="modal_content">
+            <div id="modal_body">
+              <div id="modal_title">
+                <h3></h3>
+                <span id="close_modal">
+                  <img src="../images/close.png" alt="close" />
+                </span>
+              </div>
+              <div id="modal_image">
+                <img src="" alt="" />
+              </div>
+              <p id="modal_description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

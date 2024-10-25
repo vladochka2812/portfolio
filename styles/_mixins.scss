@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin center_justify-between {
   display: flex;
   align-items: center;
@@ -20,4 +22,13 @@
 @mixin flex_column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin input {
+  height: 48px;
+  align-items: center;
+  border-radius: $normal_border-radius;
+  border: $border_style;
+  background-color: $dark_gray;
+  padding: 0 14px;
 }
