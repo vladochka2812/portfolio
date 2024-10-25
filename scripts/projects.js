@@ -181,7 +181,7 @@ const searchProjectsByName = (inputValue) => {
   return inputValue === ""
     ? projectsList
     : projectsList.filter((project) =>
-        project.name.toLowerCase().includes(inputValue.toLowerCase())
+        project.name.toLowerCase().includes(inputValue.toLowerCase().trim())
       );
 };
 
@@ -332,19 +332,26 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-selector.addEventListener("click", function () {
-  selector.classList.toggle("active");
-});
+const handelSelect = (element) => {
+  const selectedTitle = document.querySelector(".selector-title");
+  selectedTitle.innerHTML = element.innerHTML;
+  const selectedOption = element.getAttribute("data-value");
+  const projects = searchProjectsByType(selectedOption);
+  showProjects(projects);
+};
 
 document.querySelectorAll(".selector-options div").forEach((option) => {
   option.addEventListener("click", function () {
-    const selectedTitle = document.querySelector(".selector-title");
-    selectedTitle.innerHTML = this.innerHTML;
-    selectedOption = this.getAttribute("data-value");
-    const projects = searchProjectsByType(selectedOption);
-    showProjects(projects);
+    handelSelect(this);
+    const selector = document.querySelector(".selector");
+    if (selector) {
+      selector.classList.remove("active");
+    }
   });
-  selector.classList.remove("active");
+});
+
+selector.addEventListener("click", function () {
+  selector.classList.toggle("active");
 });
 
 document.addEventListener("click", function (event) {

@@ -1,0 +1,23 @@
+@import "./variables";
+@import "./mixins";
+
+.contact {
+  @include flex_column;
+  width: 100%;
+  padding: 40 20px;
+
+  .contact__links {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    li {
+        border: $border_style;
+        // border-radius:;
+      padding: 20px;
+      @include flex_column;
+      @include center_center;
+    }
+  }
+}
