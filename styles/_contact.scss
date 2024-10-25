@@ -4,7 +4,7 @@
 .contact {
   @include flex_column;
   width: 100%;
-  padding: 40 20px;
+  padding: 40px 20px;
 
   .contact__links {
     margin-top: 48px;
@@ -13,11 +13,109 @@
     gap: 20px;
 
     li {
-        border: $border_style;
-        // border-radius:;
+      border: $border_style;
+      border-radius: $normal_border-radius;
+      background-color: $dark_gray;
       padding: 20px;
       @include flex_column;
       @include center_center;
+      gap: 14px;
+
+      span {
+        @include center_center;
+        width: 80px;
+        height: 80px;
+        border-radius: $normal_border-radius;
+
+        img {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+      }
+
+      #gmail {
+        background: linear-gradient(
+          135deg,
+          rgba(66, 134, 244, 0.25) 15%,
+          rgba(234, 68, 53, 0.25) 35%,
+          rgba(251, 188, 5, 0.25) 65%,
+          rgba(52, 168, 83, 0.25)
+        );
+      }
+
+      #phone {
+        background: rgba(0, 224, 108, 0.19);
+      }
+
+      #location {
+        background: rgba(251, 188, 5, 0.19);
+      }
+
+      h3 {
+        font-weight: $font_size_18;
+        font-weight: $medium_font-weight;
+      }
+
+      a,
+      p {
+        color: $link_color;
+        font-weight: $medium_font-weight;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+        font-size: $font_size_16;
+
+        &:hover {
+          color: $light_gray;
+        }
+      }
+    }
+  }
+
+  .contact__form {
+    margin-top: 48px;
+
+    form {
+      margin-top: 36px;
+      padding: 20px;
+      border: $border_style;
+      border-radius: $normal_border-radius;
+      background-color: $dark_gray;
+      width: 100%;
+
+      div {
+        @include center_justify-between;
+        gap: 20px;
+
+        span {
+          @include flex_column;
+          width: 100%;
+
+          input {
+            @include input;
+            margin-top: 14px;
+          }
+        }
+      }
+
+      span {
+        @include flex_column;
+        width: 100%;
+        margin-top: 20px;
+
+        textarea {
+          @include input;
+          height: 288px;
+          margin-top: 14px;
+        }
+      }
+
+      button {
+        @include button;
+        margin-top: 20px;
+        width: 224px;
+      }
     }
   }
 }

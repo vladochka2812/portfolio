@@ -117,7 +117,7 @@
   margin-top: 10px;
 }
 .sidebar .sidebar__profile .sidebar__profile__description span {
-  padding: 6 8px;
+  padding: 6px 8px;
   border-radius: 8px;
   font-size: 12px;
   font-weight: 400;
@@ -210,7 +210,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 40 20px;
+  padding: 40px 20px;
 }
 .about .about__me__text {
   display: flex;
@@ -551,6 +551,131 @@
   margin-top: 14px;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 20px;
+}
+.contact .contact__links {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.contact .contact__links li {
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 8px;
+  background-color: rgb(27, 27, 27);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.contact .contact__links li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+.contact .contact__links li span img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.contact .contact__links li #gmail {
+  background: linear-gradient(135deg, rgba(66, 134, 244, 0.25) 15%, rgba(234, 68, 53, 0.25) 35%, rgba(251, 188, 5, 0.25) 65%, rgba(52, 168, 83, 0.25));
+}
+.contact .contact__links li #phone {
+  background: rgba(0, 224, 108, 0.19);
+}
+.contact .contact__links li #location {
+  background: rgba(251, 188, 5, 0.19);
+}
+.contact .contact__links li h3 {
+  font-weight: 18px;
+  font-weight: 500;
+}
+.contact .contact__links li a,
+.contact .contact__links li p {
+  color: rgb(65, 65, 65);
+  font-weight: 500;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  font-size: 16px;
+}
+.contact .contact__links li a:hover,
+.contact .contact__links li p:hover {
+  color: rgb(229, 231, 235);
+}
+.contact .contact__form {
+  margin-top: 48px;
+}
+.contact .contact__form form {
+  margin-top: 36px;
+  padding: 20px;
+  border: 2px solid rgb(49, 49, 49);
+  border-radius: 8px;
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+}
+.contact .contact__form form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.contact .contact__form form div span {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact .contact__form form div span input {
+  height: 48px;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid rgb(49, 49, 49);
+  background-color: rgb(27, 27, 27);
+  padding: 0 14px;
+  margin-top: 14px;
+}
+.contact .contact__form form span {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+.contact .contact__form form span textarea {
+  height: 48px;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid rgb(49, 49, 49);
+  background-color: rgb(27, 27, 27);
+  padding: 0 14px;
+  height: 288px;
+  margin-top: 14px;
+}
+.contact .contact__form form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 150, 95);
+  padding: 10px 36px;
+  gap: 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 200px;
+  margin-top: 20px;
+  width: 224px;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(49, 49, 49) #000;
@@ -568,6 +693,7 @@ a {
 
 button,
 input,
+textarea,
 select,
 option,
 li {
@@ -584,7 +710,7 @@ li {
   align-items: center;
   justify-content: center;
   background-color: rgb(57, 150, 95);
-  padding: 10 36px;
+  padding: 10px 36px;
   gap: 12px;
   border-radius: 8px;
   font-size: 18px;

@@ -6,6 +6,7 @@
 @import "./home";
 @import "./about";
 @import "./projects";
+@import "./contact";
 
 * {
   scrollbar-width: thin;
@@ -24,6 +25,7 @@ a {
 
 button,
 input,
+textarea,
 select,
 option,
 li {
@@ -36,14 +38,7 @@ li {
 }
 
 .nav_button {
-  @include center_center;
-  background-color: $green;
-  padding: 10 36px;
-  gap: 12px;
-  border-radius: $normal_border-radius;
-  font-size: $font_size_18;
-  font-weight: $medium_font-weight;
-  max-width: 200px;
+  @include button;
 
   .arrow_icon {
     font-size: $font_size_22;
@@ -84,5 +79,3 @@ li {
     width: 7rem;
   }
 }
-
-

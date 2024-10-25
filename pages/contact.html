@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles/css/index.css" />
     <script src="../components/header-component.js" defer></script>
     <script src="../components/sidebar-component.js" defer></script>
+    <script src="../scripts/contact.js" defer></script>
 
     <title>Contact</title>
   </head>
@@ -25,7 +26,59 @@
     <div class="content_wrapper">
       <sidebar-component></sidebar-component>
 
-      <h1>Contact</h1>
+      <div class="contact">
+        <h1 class="title_main">Contact</h1>
+        <ul class="contact__links">
+          <li>
+            <span id="gmail">
+              <img src="../images/gmail.png" alt="Gmail" />
+            </span>
+            <h3>Email</h3>
+            <a href="mailto:pubgn9642@gmail.com">pubgn9642@gmail.com</a>
+          </li>
+          <li>
+            <span id="phone">
+              <img src="../images/phone.png" alt="Phone" />
+            </span>
+            <h3>Phone number</h3>
+            <a href="tel:+9982000077729">+9982000077729</a>
+          </li>
+          <li>
+            <span id="location">
+              <img src="../images/location.png" alt="Location" />
+            </span>
+            <h3>Address</h3>
+            <p>Uzbekistan, Andijan</p>
+          </li>
+        </ul>
+        <div class="contact__form">
+          <h2 class="title_sub">Send a request</h2>
+          <form id="form">
+            <div>
+              <span>
+                <label for="name">Name*</label>
+                <input type="text" placeholder="Your name" />
+              </span>
+              <span>
+                <label for="name">Email*</label>
+                <input type="email" placeholder="Email@example.com" />
+              </span>
+            </div>
+            <span>
+              <label for="name">Description*</label>
+              <textarea
+                required=""
+                maxlength="2048"
+                id="description"
+                name="description"
+                placeholder="Your message"
+                spellcheck="false"
+              ></textarea>
+            </span>
+            <button id="submit-button" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
